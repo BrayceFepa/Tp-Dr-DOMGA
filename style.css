@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper{
+    display: none;
+    align-items: center;
+    gap: 10px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f35151, #fcfc5b);
+    padding: 40px 10px;
+    transform: scale(0);
+    transition: all 1s ease ;
+}
+.wrapper.active {
+    display: flex;
+    transform: scale(1);
+}
+
+
+.container{
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+.container .title{
+    font-size: 18px;
+    font-weight: 500;
+    color: #b41e13;
+    margin-bottom: 10px;
+}
+.container form .details-wrapper{
+    display: flex;
+    margin-top: 15px;
+}
+.container form .details-wrapper .student-details{
+    width: 100%;
+}
+.container form .details-wrapper .student-details .input-box{
+    width: calc(100% - 100px);
+    margin-bottom: 15px;
+}
+.student-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+.student-details .input-box input{
+    height: 30px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 6px;
+    font-size: 12px;
+}
+.student-details .input-box select{
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.student-details .input-box.numeric-details{
+    display: flex;
+    gap: 15px;
+
+}
+.student-details .input-box.numeric-details input{
+    height: 30px;
+}
+.student-details .gender-detaiils .category{
+    display: flex;
+    gap: 50px;
+}
+.gender-detaiils .category .gender{
+    font-size: 13px;
+}
+.student-details .gender-detaiils .category label{
+    display: flex;
+    align-items: center;
+}
+.gender-detaiils .category label .dot{
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 4px solid transparent;
+}
+#dot-1:checked ~ .category .one,
+#dot-2:checked ~ .category .two{
+    border-color: #d9d9d9;
+    background: #f35151;
+}
+form input[type="radio"]{
+    display: none;
+}
+
+form .wrapper-notes .add-notes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    gap: 20px;
+}
+.wrapper-notes .add-notes .lessons{
+    width: calc(100%/3 - 20px);
+}
+.wrapper-notes .add-notes .lessons .details{
+    display: block;
+}
+.wrapper-notes .add-notes .lessons select{
+    outline: none;
+}
+.wrapper-notes .add-notes .notes{
+    width: calc(100%/3 - 20px);
+}
+.btn-1{
+    height: 30px;
+    margin-top: 23px;
+    width: calc(100%/3 - 20px);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #b41e13;
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 60px;
+}
+.btn2{
+    height: 30px;
+    width: calc(100%/3 - 20px);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #b41e13;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.table, tr, td, th{
+    border: 1px solid rgb(80, 1, 1);
+    font-size: 13px;
+}
+.table thead{
+    background: #b41e13;
+    color: #fff;
+    font-size: 14px;
+}
+.table{
+    background: #fff;
+    margin: 0;
+}
+.options i{
+    margin: 0 7px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.wrapper-notes .table{
+    width: 70%;
+    margin-top: 20px;
+}
+.wrapper-notes .table tbody tr td{
+    text-align: center;
+}
+
+
+/* Styling of the navbar */
+.navbar .navbar-nav .nav-link.active{
+    color: #b41e13;
+}
+.navbar i{
+    color: #b41e13;
+    font-size: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.btn-primary,
+.btn-primary:focus{
+    background: #b41e13;
+    border: none;
+    outline: none;
+}
+.btn-primary:hover{
+    background: #b41e13;
+}
+
+
+
+
+
+.wrapper2 {
+    display: flex;
+    align-items: center;
+    padding-top: 70px;
+    height: 100vh;
+    /* padding: 40px 10px; */
+    background: linear-gradient(135deg, #f35151, #fcfc5b);
+    justify-content: center;
+    flex-flow: column;
+    opacity: 1;
+    transform: scale(1);
+    transition: all .3s ease;
+}
+
+.wrapper2.active {
+    display: none;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.wrapper2 h2 {
+    font-size: 30px;
+    color: black;
+    margin: 15px 0;
+}
+
+
+
+
+.wrapper2 .img{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.wrapper2 .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
