@@ -9,6 +9,8 @@ function Lessons(nom, note, volumeH, enseignant) {
 //Getting local storage matiere-list
 let matieresList = JSON.parse(localStorage.getItem("matieres-list"));
 
+let matieresTab = [];
+
 //function to show a lesson
 function showLesson() {
     let tr = "";
@@ -56,6 +58,7 @@ addBtn.onclick = (e) => {
 
     matieresList.push(lesson); //We add a new matiere object in the array
     localStorage.setItem("matieres-list", JSON.stringify(matieresList));
+    matieresTab.push(lesson);
 
     matieres.value = "";
     notes.value = "";

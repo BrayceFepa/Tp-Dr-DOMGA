@@ -6,19 +6,16 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 .wrapper{
-    display: none;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     min-height: 100vh;
     background: linear-gradient(135deg, #f35151, #fcfc5b);
     padding: 40px 10px;
-    transform: scale(0);
-    transition: all 1s ease ;
-}
-.wrapper.active {
-    display: flex;
-    transform: scale(1);
+    position: relative;
 }
 
 
@@ -28,6 +25,8 @@
     background: #fff;
     padding: 15px 20px;
     border-radius: 5px;
+    position: relative;
+    top: 21px;
 }
 .container .title{
     font-size: 18px;
@@ -216,11 +215,6 @@ form .wrapper-notes .add-notes{
     transition: all .3s ease;
 }
 
-.wrapper2.active {
-    display: none;
-    opacity: 0;
-    transform: scale(0);
-}
 
 .wrapper2 h2 {
     font-size: 30px;
@@ -241,4 +235,36 @@ form .wrapper-notes .add-notes{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+
+.infos-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+    width: 900px;
+}
+.infos-wrapper .infos-list{
+    list-style: none;
+    padding: 10px;
+    flex: 1 1 400px;
+}
+.infos-wrapper .infos-list li{
+    font-size: 15px;
+    margin: 10px 0;
+}
+.infos-wrapper .infos-list li span{
+    font-weight: bold;
+}
+.infos-wrapper .notes{
+    flex: 1 1 400px;
+}
+.infos-wrapper .line{
+    height: 100%;
+    width: 2px;
+    background: #4d0702;
 }
