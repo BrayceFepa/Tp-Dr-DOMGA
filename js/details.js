@@ -4,8 +4,9 @@ students = JSON.parse(localStorage.getItem("students-list"));
 
 function moreDetails(studentId) {
     let li = "";
+    let tr = '';
 
-    if (students) {
+    if (students) {//If item students is defined then we show its contained
         console.log(students[studentId]);
 
         li = `<li>Nom & et Prenom:<span> ${students[studentId].nom} ${students[studentId].prenom} </span></li>
@@ -15,13 +16,21 @@ function moreDetails(studentId) {
                 <li>Taille: <span>${students[studentId].taille} mètres</span></li>
                 <li>Poids: <span>${students[studentId].poids} Kg</span></li>`;
         localStorage.setItem('details', JSON.stringify(li));
+
+        students[studentId].matieres.forEach(lesson => {
+            tr += `<tr>
+                        <td>${lesson.nom} </td>
+                        <td>${lesson.note} </td>
+                    </tr>`;
+        });
+        localStorage.setItem('matieres-notes', JSON.stringify(tr));
     }
 
     location.href = "details.html";
 
     
 }
-
+console.log(students[0]);
 let data = JSON.parse(localStorage.getItem("details"));
 
 if (data) {
@@ -29,3 +38,9 @@ if (data) {
     zoneShow.innerHTML = data;
 }
 
+let lessonNote = JSON.parse(localStorage.getItem('matieres-notes'));
+console.log(lessonNote);
+
+if (lessonNote) {
+    tableShow.innerHTML = lessonNote;
+}

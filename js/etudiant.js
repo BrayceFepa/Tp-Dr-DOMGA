@@ -137,6 +137,7 @@ saveBtn.onclick = (e) => {
     poids.value = "";
     birdDate.value = "";
     sex.value = "";
+    document.querySelector("#table2").innerHTML = '';
     location.href = "index.html";
     showStudents();
 }

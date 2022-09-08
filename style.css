@@ -149,13 +149,16 @@ form .wrapper-notes .add-notes{
 }
 
 .table, tr, td, th{
-    border: 1px solid rgb(80, 1, 1);
+    border: 2px solid rgb(80, 1, 1);
     font-size: 13px;
+    text-align: center;
+    color: #4d0702;
 }
 .table thead{
-    background: #b41e13;
+    background: #da3e33;
     color: #fff;
     font-size: 14px;
+    letter-spacing: 1px;
 }
 .table{
     background: #fff;
